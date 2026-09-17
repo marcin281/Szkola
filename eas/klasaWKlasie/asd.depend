@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1789632989 source:c:\users\egzamin\desktop\asd\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+	<cstdint>
+
