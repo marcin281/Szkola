@@ -1,4 +1,4 @@
-\#Program obslugujacy ruch wahadłowy w arduino uno
+Program obslugujacy ruch wahadłowy w arduino uno
 
 
 
