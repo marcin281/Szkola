@@ -4,6 +4,10 @@
 #include <cstdint>
 
 using namespace std;
+
+//ilosc osob w klasie
+const int ile = 2;
+
 //klasa do pojedynczej osoby
 class Osoba
 {
@@ -36,7 +40,7 @@ class Klasa
 private:
     string nazwa;
     string wychowawca;
-    Osoba osoba[30];
+    Osoba osoba[ile];
 
 public:
     //metoda do wczytania z klawiatury
@@ -77,11 +81,8 @@ public:
 
 int main()
 {
-    //ilosc osob w klasie
-    int ile = 2;
     //zainicjowanie klasa1
     Klasa klasa1;
-    bool zPliku;
     uint8_t wybor;
     cout<<"z pliku czy z klawiatury?(z pliku '1', z klawiatury '2')\n";
     cin>>wybor;
