@@ -1,0 +1,11 @@
+dopóki t.length>i
+	jeżeli t[n/2]==x 
+		wypisz "znaleziono wartosc" x "na pozycji" n/2
+ 		zakoncz
+	w przeciwnym wypadku jeżeli t[n/2]<x
+		 ustaw tablice na zakres n/2-n
+	w przeciwnym wypadku 
+		ustaw tablice na zakres 0-n/2
+	n=n/2
+koniec dopoki
+wypisz "nie znaleziono wartości" x
