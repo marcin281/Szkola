@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  width: 100%;
+  background: lightgray;
+  border-bottom: 1px solid white;
+}
+
+.menu img {
+  position: absolute;
+  left: 10;
+  height: 100px;
+  width: 100px;
+}
+
+.content {
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 32px;
+  margin: 0;
+}
+
+h3 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.links {
+  position: absolute;
+  top: 40;
+  right: 30;
+  display: flex;
+  gap: 30px;
+}
+
+.flex {
+  display: flex;
+  gap: 50px;
+  margin: 15px;
+}
+
+.left {
+  margin-left: -14px;
+  width: 30%;
+  background: lightgray;
+  padding: 20px;
+}
+
+.right {
+  margin-right: -14px;
+  width: 70%;
+  background: lightgray;
+  padding: 20px;
+}
+
+
+footer {
+  width: 100%;
+  margin-top: 30px;
+  padding: 20px 0;
+
+  background: lightgray;
+  border-top: 1px solid white;
+
+  text-align: center;
+}
