@@ -1,0 +1,40 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\egzamin\\Desktop\\Nowy folder (2)\\Szkola\\eas\\inf03C#\\Zadanie1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4C069503-34F1-460C-A5D4-3CA761C0564B}|Zadanie1\\Zadanie1.csproj|c:\\users\\egzamin\\desktop\\nowy folder (2)\\szkola\\eas\\inf03c#\\zadanie1\\zadanie1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4C069503-34F1-460C-A5D4-3CA761C0564B}|Zadanie1\\Zadanie1.csproj|solutionrelative:zadanie1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\egzamin\\Desktop\\Nowy folder (2)\\Szkola\\eas\\inf03C#\\Zadanie1\\Zadanie1\\Form1.cs",
+              "RelativeDocumentMoniker": "Zadanie1\\Form1.cs",
+              "ToolTip": "C:\\Users\\egzamin\\Desktop\\Nowy folder (2)\\Szkola\\eas\\inf03C#\\Zadanie1\\Zadanie1\\Form1.cs [Design]",
+              "RelativeToolTip": "Zadanie1\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-24T07:53:22.557Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
