@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1791369744 source:c:\users\admin\desktop\nowy folder\szkola\eas\czas\main.cpp
+	<iostream>
+	<vector>
+	<stack>
+	<queue>
+	<chrono>
+	<cstdlib>
+	<ctime>
+	<algorithm>
+
