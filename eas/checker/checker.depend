@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1792394467 source:c:\users\admin\desktop\nowy folder\szkola\eas\checker\main.cpp
+	<iostream>
+	<vector>
+	<fstream>
+	<string>
+

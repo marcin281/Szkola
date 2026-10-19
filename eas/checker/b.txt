@@ -1,0 +1,14 @@
+RAPORT:
+WSPOLNE:
+auta
+superman
+TYLKO W PIERWSZYM:
+harry potter
+hobbit
+maly ksiaze
+wladza pierścieni
+TYLKO W DRUGIM:
+turbo slimak
+Hobbit
+spiderman
+mr robot
