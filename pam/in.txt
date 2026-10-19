@@ -1,0 +1,23 @@
+(zaczynam indeksowanie tabeli od 1)
+
+--------------------------------------------+
+                                            |
+rozpocznij                                  |
+                                            |
+zdefiniuj max = T[1]                        |
+zdefiniuj długość = długość T               |
+zdefiniuj indexMax = 1                      |
+zdefiniuj prawieMax, indexPrawieMax         |
+                                            |
+dla wartości i równej 1 … długość-1         | Tworzenie pętli od 1 do wielkości tablicy
+	jeżeli (T[i+1] > max)               | Porównywanie następnego elementu z aktualnym
+		prawieMax = max             |
+		max = T[i+1]                | Zamiana największej liczby na drugą największą poprzez porówynywanie
+		indexPrawieMax = indexMax   |
+		indexMax = i+1              |
+koniec pętli                                |
+                                            |
+zwróć wartości prawieMax i indexPrawieMax   | Wypisanie wartości końcowych
+                                            |
+zakończ                                     |
+		

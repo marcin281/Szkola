@@ -25,6 +25,7 @@ export default function Menu() {
                         text1="https://www.youtube.com/"
                         text2="youtube"
                     />
+                    <a href="contact">kontakt</a>
                 </div>
             </div>
         </div>
