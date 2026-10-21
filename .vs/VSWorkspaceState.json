@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\eas",
+    "\\eas\\Wpf",
+    "\\eas\\Wpf\\Wpf",
+    "\\eas\\Wpf\\Wpf\\bin",
+    "\\eas\\Wpf\\Wpf\\bin\\Debug",
+    "\\eas\\Wpf\\Wpf\\bin\\Debug\\net10.0-windows",
+    "\\eas\\Wpf\\Wpf\\bin\\Release",
+    "\\eas\\Wpf\\Wpf\\bin\\Release\\net10.0-windows",
+    "\\eas\\Wpf\\Wpf\\obj"
+  ],
+  "SelectedNode": "\\eas\\Wpf\\Wpf\\Wpf.csproj",
+  "PreviewInSolutionExplorer": false
+}
