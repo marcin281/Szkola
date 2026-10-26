@@ -1,15 +1,13 @@
 import Header from "./header";
+import Main from "./main";
 import Footer from "./footer";
-import Main from "./main"
 
-export default function Home() {
+export default function Page() {
   return (
-    <>
-      <div className="flex">
-        <Header />
-        <Main />
-        <Footer />
-      </div>
-    </>
+    <div className="dashboard">
+      <Header />
+      <Main />
+      <Footer />
+    </div>
   );
 }

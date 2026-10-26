@@ -1,9 +1,8 @@
-export default function Home() {
-    return (
-      <>
-      <footer>
-        <p>Failure - False</p>
-        </footer>
-      </>
-    );
-  }
+export default function Footer() {
+  return (
+    <footer className="footer">
+      <span className="status-dot" />
+      <p>FAILURE: FALSE</p>
+    </footer>
+  );
+}
