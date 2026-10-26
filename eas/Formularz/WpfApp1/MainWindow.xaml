@@ -1,0 +1,190 @@
+﻿<Window x:Class="FormularzWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Formularz"
+        Height="580"
+        Width="830"
+        Background="White"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="10">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- LEWA STRONA -->
+        <Grid Grid.Column="0"
+              Margin="0,0,10,0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.05*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <!-- WYBÓR PŁCI -->
+            <StackPanel Grid.Row="0"
+                        Margin="35,25,0,0">
+
+                <RadioButton x:Name="MaleRadio"
+                             Content="mężczyzna"
+                             GroupName="Gender"
+                             IsChecked="True"
+                             FontSize="16"
+                             Margin="0,0,0,15"/>
+
+                <RadioButton x:Name="FemaleRadio"
+                             Content="kobieta"
+                             GroupName="Gender"
+                             FontSize="16"
+                             Margin="0,0,0,15"/>
+
+                <RadioButton x:Name="OtherRadio"
+                             Content="inne"
+                             GroupName="Gender"
+                             FontSize="16"/>
+            </StackPanel>
+
+            <!-- FORMULARZ -->
+            <Grid Grid.Row="1"
+                  Margin="35,25,0,0"
+                  VerticalAlignment="Top">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="95"/>
+                    <ColumnDefinition Width="110"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="45"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0"
+                           Grid.Column="0"
+                           Text="wiek"
+                           FontSize="16"
+                           VerticalAlignment="Center"/>
+
+                <TextBox x:Name="AgeTextBox"
+                         Grid.Row="0"
+                         Grid.Column="1"
+                         Width="100"
+                         Height="32"
+                         HorizontalAlignment="Left"
+                         VerticalAlignment="Center"/>
+
+                <TextBlock Grid.Row="1"
+                           Grid.Column="0"
+                           Text="kolor"
+                           FontSize="16"
+                           VerticalAlignment="Center"/>
+
+                <ComboBox x:Name="ColorComboBox"
+                          Grid.Row="1"
+                          Grid.Column="1"
+                          Width="100"
+                          Height="30"
+                          SelectedIndex="0"
+                          HorizontalAlignment="Left"
+                          VerticalAlignment="Center">
+
+                    <ComboBoxItem Content="Czerwony"/>
+                    <ComboBoxItem Content="Niebieski"/>
+                    <ComboBoxItem Content="Zielony"/>
+                    <ComboBoxItem Content="Żółty"/>
+                    <ComboBoxItem Content="Czarny"/>
+                    <ComboBoxItem Content="Inny"/>
+
+                </ComboBox>
+
+                <TextBlock Grid.Row="2"
+                           Grid.Column="0"
+                           Text="zgoda"
+                           FontSize="16"
+                           VerticalAlignment="Center"/>
+
+                <CheckBox x:Name="ConsentCheckBox"
+                          Grid.Row="2"
+                          Grid.Column="1"
+                          Width="22"
+                          Height="22"
+                          HorizontalAlignment="Left"
+                          VerticalAlignment="Center"/>
+
+                <Button Grid.Row="3"
+                        Grid.ColumnSpan="2"
+                        Content="zapisz"
+                        Click="SaveButton_Click"
+                        Width="90"
+                        Height="34"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Background="White"
+                        Foreground="Black"
+                        BorderBrush="Black"
+                        BorderThickness="1"/>
+            </Grid>
+        </Grid>
+
+        <!-- PRAWA STRONA: WYNIKI -->
+        <StackPanel Grid.Column="1"
+                    Margin="55,35,10,0">
+
+            <TextBlock Text="Wyniki:"
+                       FontSize="17"
+                       Margin="0,0,0,25"/>
+
+            <TextBlock Text="średnia wieku:"
+                       FontSize="16"/>
+
+            <TextBlock x:Name="AverageAgeText"
+                       Text="Brak danych"
+                       FontSize="16"
+                       Margin="0,5,0,20"/>
+
+            <TextBlock Text="najczęstszy kolor"
+                       FontSize="16"/>
+
+            <TextBlock x:Name="PopularColorText"
+                       Text="Brak danych"
+                       FontSize="16"
+                       TextWrapping="Wrap"
+                       Margin="0,5,0,20"/>
+
+            <TextBlock Text="ile m"
+                       FontSize="16"/>
+
+            <TextBlock x:Name="MaleCountText"
+                       Text="0"
+                       FontSize="16"
+                       Margin="0,5,0,20"/>
+
+            <TextBlock Text="ile k"
+                       FontSize="16"/>
+
+            <TextBlock x:Name="FemaleCountText"
+                       Text="0"
+                       FontSize="16"
+                       Margin="0,5,0,20"/>
+
+            <TextBlock Text="ile zgoda"
+                       FontSize="16"/>
+
+            <TextBlock x:Name="ConsentCountText"
+                       Text="0"
+                       FontSize="16"
+                       Margin="0,5,0,15"/>
+
+            <TextBlock x:Name="MessageText"
+                       TextWrapping="Wrap"
+                       FontSize="13"
+                       Margin="0,5,0,0"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

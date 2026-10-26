@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Nowy folder\\Szkola\\eas\\WPF\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8E6DB87E-C2C0-4338-8E84-2521FBE98D0F}|WPF\\WPF.csproj|c:\\users\\admin\\desktop\\nowy folder\\szkola\\eas\\wpf\\wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8E6DB87E-C2C0-4338-8E84-2521FBE98D0F}|WPF\\WPF.csproj|solutionrelative:wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{68245C1E-B56E-9570-FC88-BA8BDDA8077B}|WPF\\WPF.csproj|c:\\users\\admin\\desktop\\nowy folder\\szkola\\eas\\wpf\\wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{68245C1E-B56E-9570-FC88-BA8BDDA8077B}|WPF\\WPF.csproj|solutionrelative:wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8E6DB87E-C2C0-4338-8E84-2521FBE98D0F}|WPF\\WPF.csproj|c:\\users\\admin\\desktop\\nowy folder\\szkola\\eas\\wpf\\wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E6DB87E-C2C0-4338-8E84-2521FBE98D0F}|WPF\\WPF.csproj|solutionrelative:wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68245C1E-B56E-9570-FC88-BA8BDDA8077B}|WPF\\WPF.csproj|c:\\users\\admin\\desktop\\nowy folder\\szkola\\eas\\wpf\\wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68245C1E-B56E-9570-FC88-BA8BDDA8077B}|WPF\\WPF.csproj|solutionrelative:wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,8 +42,7 @@
               "RelativeToolTip": "WPF\\MainWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-21T11:00:38.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-21T11:00:38.257Z"
             }
           ]
         }

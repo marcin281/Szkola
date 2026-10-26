@@ -1,0 +1,17 @@
+﻿WYNIKI FORMULARZA
+=================
+
+ZAPISANE OSOBY
+--------------
+Płeć: M, Wiek: 6, Kolor: Czerwony, Zgoda: Nie
+Płeć: K, Wiek: 7, Kolor: Zielony, Zgoda: Nie
+Płeć: M, Wiek: 65, Kolor: Czarny, Zgoda: Tak
+Płeć: M, Wiek: 64, Kolor: Czerwony, Zgoda: Nie
+
+STATYSTYKI
+==========
+Średnia wieku: 35,50
+Najczęstszy kolor: Czerwony (2)
+Liczba mężczyzn: 3
+Liczba kobiet: 1
+Liczba zgód: 1
