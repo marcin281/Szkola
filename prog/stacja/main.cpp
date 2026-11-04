@@ -15,7 +15,7 @@ struct dane {
 class pomiary {
 public:
 
-    // Wczytywanie danych z pliku
+    // Wczytywanie danych z pliku pobierajaca adres pamieci Dane
     void wczytaj(vector<dane>& Dane) {
         try {
             ifstream plik("a.txt");
@@ -54,7 +54,7 @@ public:
         }
     }
 
-    // Wyszukiwanie pomiaru z najnizsza temperatura
+    // Wyszukiwanie pomiaru z najnizsza temperatura pobierajaca const adres pamieci Dane
     void min_temp(const vector<dane>& Dane) {
 
         // Sprawdzenie, czy wektor zawiera dane
@@ -86,7 +86,7 @@ public:
              << min_w << endl;
     }
 
-    // Wyszukiwanie pomiarow powyzej podanej temperatury
+    // Wyszukiwanie pomiarow powyzej podanej temperatury pobierajaca const adres pamieci Dane
     void szukaj(const vector<dane>& Dane, float liczba) {
 
         for (int i = 0; i < Dane.size(); i++) {
