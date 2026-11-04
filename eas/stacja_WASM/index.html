@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Stacja meteorologiczna</title>
+</head>
+<body>
+
+    <h1>Stacja meteorologiczna</h1>
+
+    <h2>Wczytywanie danych</h2>
+
+    <button id="wczytajBtn" onclick="wczytaj()" disabled>
+        Wczytaj
+    </button>
+
+    <p>Najniższa temperatura:</p>
+
+    <pre id="minimum"></pre>
+
+    <hr>
+
+    <h2>Wyszukiwanie pomiarów</h2>
+
+    <p>Podaj temperaturę:</p>
+
+    <input type="number" id="temperatura" step="any">
+
+    <button id="szukajBtn" onclick="szukaj()" disabled>
+        Submit
+    </button>
+
+    <p>Wyniki:</p>
+
+    <pre id="wyniki"></pre>
+
+    <script>
+        var Module = {
+            onRuntimeInitialized: function() {
+                document.getElementById("wczytajBtn").disabled = false;
+            }
+        };
+
+        function wczytaj() {
+
+            let wynik = Module.ccall(
+                'wczytaj',
+                'string',
+                [],
+                []
+            );
+
+            document.getElementById("minimum").textContent = wynik;
+
+            if (wynik.includes("najmniejsza temperatura:")) {
+                document.getElementById("szukajBtn").disabled = false;
+            }
+        }
+
+        function szukaj() {
+
+            let liczba = document.getElementById("temperatura").value;
+
+            if (liczba.trim() === "" || !Number.isFinite(Number(liczba))) {
+                alert("Podaj poprawną temperaturę!");
+                return;
+            }
+
+            let wynik = Module.ccall(
+                'szukaj',
+                'string',
+                ['number'],
+                [Number(liczba)]
+            );
+
+            document.getElementById("wyniki").textContent = wynik;
+        }
+    </script>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
