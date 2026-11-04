@@ -1,49 +1,41 @@
-Pomiary temperatury i wiatru
-Opis projektu
+# System Analizy Pomiarów Meteorologicznych
 
-Program napisany w języku C++, który odczytuje dane pomiarowe z pliku tekstowego a.txt, analizuje temperatury oraz umożliwia wyszukiwanie pomiarów przekraczających podaną wartość temperatury.
+Aplikacja konsolowa w języku C++ służąca do wczytywania, filtrowania oraz analizy danych pomiarowych (temperatury i prędkości wiatru) z pliku tekstowego.
 
-Funkcjonalności
-Wczytywanie danych – odczytywanie pomiarów z pliku a.txt.
-Wyszukiwanie minimalnej temperatury – odnajdywanie pomiaru z najniższą temperaturą i wyświetlanie jego identyfikatora, daty, temperatury oraz prędkości wiatru.
-Filtrowanie pomiarów – wyświetlanie wszystkich pomiarów, w których temperatura jest większa od wartości podanej przez użytkownika.
-Format pliku wejściowego
+### Główne funkcje
 
-Dane powinny znajdować się w pliku a.txt.
+* **Wczytywanie danych z pliku:** Automatyczne pobieranie rekordów z pliku zewnętrznego i parsowanie linii.
+* **Obsługa błędów (Try-Catch):** Bezpieczne sprawdzanie poprawności otwarcia pliku i zgłaszanie wyjątków w przypadku jego braku.
+* **Analiza minimów:** Automatyczne odnajdywanie i wyświetlanie pełnego rekordu z najniższą zanotowaną temperaturą.
+* **Filtrowanie danych:** Dynamiczne wyszukiwanie wszystkich pomiarów, których temperatura przekracza wartość wskazaną przez użytkownika.
 
-Każdy wiersz powinien zawierać następujące informacje oddzielone średnikami:
+### Struktura pliku wejściowego (a.txt)
 
-text
-id;data;temperatura;wiatr
+Program do poprawnego działania wymaga pliku o nazwie `a.txt` umieszczonego w tym samym katalogu co plik wykonywalny. Dane w pliku muszą być oddzielone średnikami według schematu: `ID;DATA;TEMPERATURA;WIATR`.
 
+Przykładowa zawartość pliku:
+```text
+ST-01;2026-11-01;12.5;4.2
+ST-02;2026-11-02;-3.5;12.0
+ST-03;2026-11-03;18.2;2.1
+```
 
-Przykład:
+### Technologia i struktura kodu
 
-text
-1;2024-01-01;12.5;5.2
-2;2024-01-02;-3.4;7.1
-3;2024-01-03;8.2;4.5
-4;2024-01-04;-7.1;6.3
+Projekt został napisany w standardzie C++11 (lub nowszym) i wykorzystuje programowanie obiektowe oraz bibliotekę STL:
+* `struct dane` – Struktura przechowująca pojedynczy rekord pomiarowy.
+* `class pomiary` – Klasa zarządzająca logiką aplikacji (`wczytaj`, `min_temp`, `szukaj`).
+* `std::vector` – Kontener używany do dynamicznego przechowywania struktur w pamięci.
+* `std::stringstream` – Narzędzie wykorzystane do podziału tekstu względem separatora (średnika).
 
-Wykorzystane technologie
-C++
-Biblioteka <iostream> – obsługa wejścia i wyjścia.
-Biblioteka <fstream> – odczyt danych z pliku.
-Biblioteka <vector> – przechowywanie pomiarów.
-Biblioteka <sstream> – przetwarzanie danych tekstowych.
-Struktura programu
-struct dane – przechowuje identyfikator, datę, temperaturę i wiatr.
-class pomiary – zawiera metody odpowiedzialne za obsługę i analizę danych.
-wczytaj() – odczytuje dane z pliku i zapisuje je w wektorze.
-min_temp() – wyszukuje i wyświetla pomiar o najniższej temperaturze.
-szukaj() – wyszukuje pomiary z temperaturą większą od podanej przez użytkownika.
+### Instrukcja uruchomienia
 
-Program:
-
-Wczytuje dane z pliku.
-Wyświetla pomiar z najniższą temperaturą.
-Pobiera od użytkownika wartość temperatury.
-Wyświetla wszystkie pomiary, których temperatura jest większa od podanej wartości.
-Autor
-
-Projekt wykonany w języku C++.
+1. Skonstruuj plik `a.txt` z danymi pomiarowymi w folderze projektu.
+2. Skompiluj program za pomocą g++:
+   ```bash
+   g++ -std=c++11 main.cpp -o analizator
+   ```
+3. Uruchom aplikację:
+   ```bash
+   ./analizator
+   ```
