@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1793794307 source:c:\users\admin\desktop\nowy folder\szkola\prog\stacja\main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	<sstream>
+
