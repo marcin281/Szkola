@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
 }
@@ -17,6 +18,8 @@ body {
   background: #08070d;
 }
 
+/* HEADER */
+
 .header h1 {
   margin: 20px 0;
   color: #d0ced6;
@@ -24,6 +27,8 @@ body {
   font-size: 32px;
   font-weight: normal;
 }
+
+/* NAVIGATION */
 
 .nav {
   display: flex;
@@ -63,6 +68,8 @@ body {
   text-decoration: underline;
 }
 
+/* MAIN */
+
 .main {
   flex: 1;
   min-height: 300px;
@@ -77,6 +84,8 @@ body {
   height: auto;
   object-fit: contain;
 }
+
+/* FOOTER */
 
 .footer {
   display: flex;
@@ -93,6 +102,8 @@ body {
   background: #77727f;
   border-radius: 50%;
 }
+
+/* STATUS */
 
 .status-content {
   flex: 1;
@@ -112,20 +123,7 @@ body {
   color: #a09ca9;
   font-size: 15px;
 }
-form {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-.kill-content h1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 400%;
-}
+
 .status-content a {
   display: inline-block;
   transition: transform 3s linear;
@@ -135,4 +133,111 @@ form {
 
 .status-content a:hover {
   transform: translateX(80vw);
+}
+
+/* FORM */
+
+form {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* KILL */
+
+.kill-content h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 400%;
+}
+
+/* CREW */
+
+.crew-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 10px;
+  text-align: center;
+}
+
+.crew-content h2 {
+  color: #d0ced6;
+  font-size: 22px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.crew-content a {
+  display: inline-block;
+  margin: 15px 0;
+  color: #a09ca9;
+  text-decoration: none;
+}
+
+.crew-content a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.crew-member {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #292631;
+  background: #100e17;
+  text-align: center;
+}
+
+.crew-member p {
+  margin: 5px 0;
+  color: #a09ca9;
+  font-size: 14px;
+}
+
+/* ADD CREW */
+
+.crew-form {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.crew-form input {
+  width: 280px;
+  padding: 12px;
+  background: #100e17;
+  border: 1px solid #393542;
+  color: #d0ced6;
+  outline: none;
+}
+
+.crew-form input:focus {
+  border-color: #85818f;
+}
+
+.crew-form input::placeholder {
+  color: #77727f;
+}
+
+.crew-form button {
+  width: 280px;
+  padding: 12px;
+  background: #292631;
+  border: 1px solid #393542;
+  color: #d0ced6;
+  cursor: pointer;
+}
+
+.crew-form button:hover {
+  background: #393542;
 }
