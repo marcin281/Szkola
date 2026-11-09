@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mój program WASM</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Mój program w WebAssembly</h1>
+
+    <label>Tekst:</label>
+    <textarea id="text" placeholder="Wpisz tekst"></textarea>
+
+    <label>Klucz (dokładnie 32 znaki):</label>
+    <input
+        type="text"
+        id="key"
+        maxlength="32"
+        placeholder="Wpisz klucz"
+    >
+
+    <button onclick="encrypt()">Szyfruj</button>
+
+    <h2>Wynik:</h2>
+
+    <textarea id="result" placeholder="Wynik pojawi się tutaj"></textarea>
+
+    <p id="status"></p>
+
+    <script src="main.js"></script>
+
+    <script>
+        let wasm = null;
+
+        Module().then(instance => {
+            wasm = instance;
+            document.getElementById("status").innerText =
+                "WebAssembly załadowany!";
+        });
+
+        function encrypt() {
+
+            if (!wasm) {
+                alert("WASM jeszcze się ładuje!");
+                return;
+            }
+
+            const text = document.getElementById("text").value;
+            const key = document.getElementById("key").value;
+
+            if (key.length !== 32) {
+                alert("Klucz musi mieć dokładnie 32 znaki!");
+                return;
+            }
+
+            wasm.ccall(
+                "encrypt",
+                null,
+                ["string", "string"],
+                [text, key]
+            );
+
+            const ptr = wasm.ccall(
+                "getResult",
+                "number",
+                [],
+                []
+            );
+
+            const len = wasm.ccall(
+                "getResultLength",
+                "number",
+                [],
+                []
+            );
+
+            const bytes = wasm.HEAPU8.slice(ptr, ptr + len);
+
+            // Bezstratne przedstawienie bajtów w polu tekstowym
+            const result = Array.from(bytes)
+                .map(b => String.fromCharCode(b))
+                .join("");
+
+            document.getElementById("result").value = result;
+        }
+    </script>
+
+</body>
+</html>
