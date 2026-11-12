@@ -8,7 +8,6 @@ import { UsersService } from './users.service';
 })
 export class UsersComponent implements OnInit {
     usersList: string[];
-    @Output() userDeleted = new EventEmitter<string>();
 
     constructor(private uService: UsersService) {
         this.usersList = uService.users
@@ -19,7 +18,6 @@ export class UsersComponent implements OnInit {
     }
 
     onDeleteUser(user: string): void {
-        this.uService.deleteUser(user);
-        this.usersList = this.uService.users;
+        this.uService.removeUser(user);
     }
 }
