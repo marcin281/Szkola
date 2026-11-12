@@ -1,4 +1,7 @@
-<div>Uczniowie:</div>
+<h3>Uczniowie:</h3>
 <ul>
-  <li *ngFor="let u of usersList">{{ u }}</li>
+    <li *ngFor="let user of usersList">
+        {{ user }}
+        <button (click)="onDeleteUser(user)">Usuń</button>
+    </li>
 </ul>
