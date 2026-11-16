@@ -1,0 +1,48 @@
+﻿<Window x:Class="Rowery.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Wypożyczalnia rowerów" Height="550" Width="950">
+
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="220"/>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid x:Name="dgRowery" AutoGenerateColumns="False"
+                  IsReadOnly="True" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Opis" Binding="{Binding Opis}"/>
+                <DataGridTextColumn Header="Rodzaj" Binding="{Binding Rodzaj}"/>
+                <DataGridTextColumn Header="Cena" Binding="{Binding Cena}"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}"/>
+                <DataGridTemplateColumn Header="Zdjęcie">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding Obraz}"
+                                   Width="70" Height="45"
+                                   Stretch="Uniform"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Grid.Column="1" Margin="15,0,0,0">
+            <TextBlock Text="Dodaj rower"/>
+            <TextBox x:Name="txtId"/>
+            <TextBlock Text="Opis"/>
+            <TextBox x:Name="txtOpis"/>
+            <TextBlock Text="Rodzaj"/>
+            <TextBox x:Name="txtRodzaj"/>
+            <TextBlock Text="Cena"/>
+            <TextBox x:Name="txtCena"/>
+            <Button Content="Dodaj rower" Click="DodajRower_Click"/>
+            <Button Content="Wypożycz rower" Click="WypozyczRower_Click"/>
+            <TextBlock Text="Liczba godzin"/>
+            <TextBox x:Name="txtGodziny"/>
+            <Button Content="Zwróć rower" Click="ZwrocRower_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

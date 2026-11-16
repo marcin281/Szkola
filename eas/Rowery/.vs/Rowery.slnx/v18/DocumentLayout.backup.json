@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Nowy folder\\Szkola\\eas\\Rowery\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{425FFF6A-D760-4F38-BA5A-3AEF53AD71A2}|Rowery\\Rowery.csproj|c:\\users\\admin\\desktop\\nowy folder\\szkola\\eas\\rowery\\rowery\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{425FFF6A-D760-4F38-BA5A-3AEF53AD71A2}|Rowery\\Rowery.csproj|solutionrelative:rowery\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{425FFF6A-D760-4F38-BA5A-3AEF53AD71A2}|Rowery\\Rowery.csproj|c:\\users\\admin\\desktop\\nowy folder\\szkola\\eas\\rowery\\rowery\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{425FFF6A-D760-4F38-BA5A-3AEF53AD71A2}|Rowery\\Rowery.csproj|solutionrelative:rowery\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Nowy folder\\Szkola\\eas\\Rowery\\Rowery\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Rowery\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Nowy folder\\Szkola\\eas\\Rowery\\Rowery\\MainWindow.xaml",
+              "RelativeToolTip": "Rowery\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-16T07:07:10.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Nowy folder\\Szkola\\eas\\Rowery\\Rowery\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Rowery\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Nowy folder\\Szkola\\eas\\Rowery\\Rowery\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Rowery\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAIwFQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T07:07:08.774Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
