@@ -5,15 +5,13 @@ import { useRouter } from "next/navigation";
 
 export default function AddCrew() {
   const [name, setName] = useState("");
-  const [surname, setSurname] = useState("");
-  const [role, setRole] = useState("");
 
   const router = useRouter();
 
   const addCrew = () => {
     const crew = JSON.parse(localStorage.getItem("crew") || "[]");
 
-    crew.push({ name, surname, role });
+    crew.push({ name});
 
     localStorage.setItem("crew", JSON.stringify(crew));
 
@@ -29,8 +27,6 @@ export default function AddCrew() {
         addCrew();
         }}>
             <input placeholder="Name" onChange={e => setName(e.target.value)} />
-            <input placeholder="Surname" onChange={e => setSurname(e.target.value)} />
-            <input placeholder="Role" onChange={e => setRole(e.target.value)} />
             <button type="submit">Add crew member</button>
         </form>
     </div>
