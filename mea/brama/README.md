@@ -47,7 +47,6 @@ Program opiera się na maszynie stanów przechowującej aktualny status bramy w 
 
 ```mermaid
 stateDiagram-v2
-    [*] --> Zamknieta : Start systemu (setup)
     
     Zamknieta --> Otwieranie : Pilot [POWER]
     Otwieranie --> Otwarta : Osiągnięto cel (90°, 90°)
