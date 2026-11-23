@@ -1,0 +1,188 @@
+<svg class="dark " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 584.75 820" width="584.75" height="820" id="me145f9__root" data-diagram-type="ascii">
+  <style data-mercat-style="universal">.mercat text{font-family:'Google Sans',Roboto,Arial,sans-serif;fill:var(--m-text);dominant-baseline:central}.mercat .m-node .m-shape{fill:var(--m-node-fill);stroke:var(--m-node-stroke);stroke-width:1.5px}.mercat .m-edge .m-path{fill:none;stroke:var(--m-line);stroke-width:1.5px}.mercat .m-note .m-shape{fill:var(--m-note-fill);stroke:var(--m-note-stroke);stroke-width:1px}.mercat .m-note .m-label{fill:var(--m-note-text)}.mercat .t-heading{font-size:14px;font-weight:600}.mercat .t-label{font-size:13px;font-weight:500}</style>
+  <style data-mercat-style="theme-light">#me145f9__root{--m-bg:#ffffff;--m-text:#1f1f1f;--m-line:#545454;--m-node-fill:#f8f9fa;--m-node-stroke:#747775;--m-note-fill:#fef9e7;--m-note-stroke:#f39c12;--m-note-text:#1f1f1f}</style>
+  <style data-mercat-style="theme-dark">#me145f9__root.dark{--m-bg:#1f1f1f;--m-text:#e3e3e3;--m-line:#bfbfbf;--m-node-fill:#2d2e30;--m-node-stroke:#8e918f;--m-note-fill:#69550d;--m-note-stroke:#f39c12;--m-note-text:#e3e3e3}</style>
+  <style data-mercat-style="type">#me145f9__root .outer-box{fill:var(--m-text);stroke:var(--m-node-stroke);stroke-width:1.75px;fill-opacity:0.06}#me145f9__root .rect-pill,#me145f9__root .stadium-pill{fill:var(--m-bg);stroke:var(--m-node-stroke);stroke-width:1.5px}#me145f9__root .header-text{fill:var(--m-text);font-size:14px;font-weight:600;white-space:pre}#me145f9__root .label-text{fill:var(--m-text);font-size:13px;font-weight:500;white-space:pre}#me145f9__root .arrow-line,#me145f9__root .bus-line{fill:none;stroke:var(--m-line);stroke-width:1.5px;stroke-linecap:round;stroke-linejoin:round}#me145f9__root .annotation-text{fill:var(--m-text);font-size:12px;font-weight:500;white-space:pre}</style>
+  <style data-mercat-style="diagram">#me145f9__root text{font-family:Google Sans Mono, Roboto Mono, monospace}</style>
+  <g class="mercat mercat-ascii">
+    <defs>
+      <marker id="me145f9__mk-arrow" refX="9.45" refY="3.4" markerWidth="10.8" markerHeight="6.8" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+        <path d="M 0 0 L 10.8 3.4 L 0 6.8 Z" class="m-marker" fill="var(--m-line)" stroke="none"/>
+      </marker>
+    </defs>
+    <g class="m-node shape outer cluster" id="me145f9__node__n0" data-role="step">
+      <rect x="104.25" y="80" width="212.5" height="88" class="m-shape outer-box"/>
+      <text x="206.25" y="113" class="m-label t-heading header-text" text-anchor="middle">STAN 0: ZAMKNIĘTA</text>
+      <text x="206.25" y="135" class="m-label t-heading header-text" text-anchor="middle">(serwo1=0, serwo2=180)</text>
+    </g>
+    <g class="m-node shape outer cluster" id="me145f9__node__n1" data-role="step">
+      <rect x="104.25" y="256" width="212.5" height="88" class="m-shape outer-box"/>
+      <text x="206.25" y="289" class="m-label t-heading header-text" text-anchor="middle">STAN 4: OTWIERANIE</text>
+      <text x="206.25" y="311" class="m-label t-heading header-text" text-anchor="middle">(kierunek=4, ruch=ON)</text>
+    </g>
+    <g class="m-node shape outer cluster" id="me145f9__node__n2" data-role="step">
+      <rect x="36.25" y="454" width="178.5" height="88" class="m-shape outer-box"/>
+      <text x="121.25" y="487" class="m-label t-heading header-text" text-anchor="middle">STAN 1: OTWARTA</text>
+      <text x="121.25" y="509" class="m-label t-heading header-text" text-anchor="middle">(serwo1=90, s2=90)</text>
+    </g>
+    <g class="m-node shape outer cluster" id="me145f9__node__n3" data-role="step">
+      <rect x="240.25" y="454" width="212.5" height="110" class="m-shape outer-box"/>
+      <text x="342.25" y="487" class="m-label t-heading header-text" text-anchor="middle">STAN 6: ZATRZYMANIE</text>
+      <text x="342.25" y="509" class="m-label t-heading header-text" text-anchor="middle">(ruch=OFF, odwraca</text>
+      <text x="342.25" y="531" class="m-label t-heading header-text" text-anchor="middle">zmienną 'kierunek')</text>
+    </g>
+    <g class="m-node shape outer cluster" id="me145f9__node__n4" data-role="step">
+      <rect x="36.25" y="652" width="212.5" height="88" class="m-shape outer-box"/>
+      <text x="138.25" y="685" class="m-label t-heading header-text" text-anchor="middle">STAN 5: ZAMYKANIE</text>
+      <text x="138.25" y="707" class="m-label t-heading header-text" text-anchor="middle">(kierunek=5, ruch=ON)</text>
+    </g>
+    <g class="m-node shape inner" id="me145f9__node__n5" data-role="step">
+      <rect x="140.25" y="15" width="149" height="20" rx="3" ry="3" class="m-shape rect-pill"/>
+      <text x="214.75" y="25" class="m-label t-label label-text" text-anchor="middle">START: setup()</text>
+    </g>
+    <g class="m-node shape inner" id="me145f9__node__n6" data-role="step">
+      <rect x="360.7" y="213" width="90.6" height="20" rx="10" ry="10" class="m-shape stadium-pill"/>
+      <text x="406" y="223" class="m-label t-label label-text" text-anchor="middle">0 i 180</text>
+    </g>
+    <g class="m-node shape inner" id="me145f9__node__n7" data-role="step">
+      <rect x="105.7" y="389" width="90.6" height="20" rx="10" ry="10" class="m-shape stadium-pill"/>
+      <text x="151" y="399" class="m-label t-label label-text" text-anchor="middle">90 i 90</text>
+    </g>
+    <g class="m-node shape inner" id="me145f9__node__n8" data-role="step">
+      <rect x="234.25" y="609" width="114" height="20" rx="10" ry="10" class="m-shape stadium-pill"/>
+      <text x="291.25" y="619" class="m-label t-label label-text" text-anchor="middle">kierunek=4</text>
+    </g>
+    <g class="m-node shape inner" id="me145f9__node__n9" data-role="step">
+      <rect x="353.25" y="609" width="114" height="20" rx="10" ry="10" class="m-shape stadium-pill"/>
+      <text x="410.25" y="619" class="m-label t-label label-text" text-anchor="middle">kierunek=5</text>
+    </g>
+    <g class="m-node shape inner" id="me145f9__node__n10" data-role="step">
+      <rect x="22.45" y="785" width="129.6" height="20" rx="10" ry="10" class="m-shape stadium-pill"/>
+      <text x="87.25" y="795" class="m-label t-label label-text" text-anchor="middle">Serwa w celu</text>
+    </g>
+    <g class="m-node shape inner" id="me145f9__node__n11" data-role="step">
+      <rect x="174.25" y="785" width="395.5" height="20" rx="10" ry="10" class="m-shape stadium-pill"/>
+      <text x="372" y="795" class="m-label t-label label-text" text-anchor="middle">Pilot: POWER lub PIR=HIGH ──► wraca do STAN 6</text>
+    </g>
+    <g class="m-edge" id="me145f9__edge__pt__n0__0" data-role="connector">
+      <line x1="15" y1="113" x2="102.9" y2="113" class="m-path arrow-line" marker-end="url(#me145f9__mk-arrow)"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__pt__n0__1" data-role="connector">
+      <line x1="406" y1="113" x2="318.1" y2="113" class="m-path arrow-line" marker-end="url(#me145f9__mk-arrow)"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__pt__n4__0" data-role="connector">
+      <line x1="397.5" y1="685" x2="250.1" y2="685" class="m-path arrow-line" marker-end="url(#me145f9__mk-arrow)"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__n10__pt__0" data-role="connector">
+      <line x1="15" y1="773" x2="91.5" y2="773" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__n11__pt__0" data-role="connector">
+      <line x1="193.5" y1="773" x2="295.5" y2="773" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__pt__n10__0" data-role="connector">
+      <line x1="15" y1="113" x2="15" y2="773" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__n4__n10__0" data-role="connector">
+      <line x1="91.5" y1="740" x2="91.5" y2="773" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__n2__pt__0" data-role="connector">
+      <line x1="125.5" y1="542" x2="125.5" y2="553" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__n2__a5__0" data-role="connector">
+      <line x1="125.5" y1="542" x2="125.5" y2="567.6" class="m-path arrow-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__a5__n4__0" data-role="connector">
+      <line x1="125.5" y1="582.4" x2="125.5" y2="650.65" class="m-path arrow-line" marker-end="url(#me145f9__mk-arrow)"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__n1__a2__0" data-role="connector">
+      <line x1="159.5" y1="344" x2="159.5" y2="369.6" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__n7__a2__0" data-role="connector">
+      <line x1="159.5" y1="384.4" x2="159.5" y2="389" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__n7__n2__0" data-role="connector">
+      <line x1="159.5" y1="409" x2="159.5" y2="452.65" class="m-path arrow-line" marker-end="url(#me145f9__mk-arrow)"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__n4__n11__0" data-role="connector">
+      <line x1="193.5" y1="740" x2="193.5" y2="773" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__n5__n0__0" data-role="connector">
+      <line x1="210.5" y1="35" x2="210.5" y2="78.65" class="m-path arrow-line" marker-end="url(#me145f9__mk-arrow)"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__n0__a0__0" data-role="connector">
+      <line x1="210.5" y1="168" x2="210.5" y2="193.6" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__a0__n1__0" data-role="connector">
+      <line x1="210.5" y1="208.4" x2="210.5" y2="256" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__n0__a0__1" data-role="connector">
+      <line x1="210.5" y1="168" x2="210.5" y2="193.6" class="m-path arrow-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__a0__n1__1" data-role="connector">
+      <line x1="210.5" y1="208.4" x2="210.5" y2="254.65" class="m-path arrow-line" marker-end="url(#me145f9__mk-arrow)"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__n1__pt__0" data-role="connector">
+      <line x1="261.5" y1="344" x2="261.5" y2="355" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__n1__a3__0" data-role="connector">
+      <line x1="261.5" y1="344" x2="261.5" y2="369.6" class="m-path arrow-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__a3__a4__0" data-role="connector">
+      <line x1="261.5" y1="384.4" x2="261.5" y2="391.6" class="m-path arrow-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__a4__n3__0" data-role="connector">
+      <line x1="261.5" y1="406.4" x2="261.5" y2="452.65" class="m-path arrow-line" marker-end="url(#me145f9__mk-arrow)"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__n3__a6__0" data-role="connector">
+      <line x1="295.5" y1="564" x2="295.5" y2="589.6" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__n8__a6__0" data-role="connector">
+      <line x1="295.5" y1="604.4" x2="295.5" y2="609" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__n8__n11__0" data-role="connector">
+      <line x1="295.5" y1="629" x2="295.5" y2="773" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__n3__a7__0" data-role="connector">
+      <line x1="397.5" y1="564" x2="397.5" y2="589.6" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__n9__a7__0" data-role="connector">
+      <line x1="397.5" y1="604.4" x2="397.5" y2="609" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__n9__pt__0" data-role="connector">
+      <line x1="397.5" y1="629" x2="397.5" y2="685" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__pt__a1__0" data-role="connector">
+      <line x1="406" y1="113" x2="406" y2="193.6" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__n6__a1__0" data-role="connector">
+      <line x1="406" y1="208.4" x2="406" y2="213" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="me145f9__edge__n6__n3__0" data-role="connector">
+      <line x1="406" y1="233" x2="406" y2="454" class="m-path bus-line"/>
+    </g>
+    <g class="m-node m-note" id="me145f9__note__a0" data-role="annotation">
+      <text x="155.25" y="201" class="m-label t-label annotation-text" text-anchor="start">Pilot: POWER</text>
+    </g>
+    <g class="m-node m-note" id="me145f9__note__a1" data-role="annotation">
+      <text x="350.75" y="201" class="m-label t-label annotation-text" text-anchor="start">Serwa w celu</text>
+    </g>
+    <g class="m-node m-note" id="me145f9__note__a2" data-role="annotation">
+      <text x="104.25" y="377" class="m-label t-label annotation-text" text-anchor="start">Serwa w celu</text>
+    </g>
+    <g class="m-node m-note" id="me145f9__note__a3" data-role="annotation">
+      <text x="223.25" y="377" class="m-label t-label annotation-text" text-anchor="start">Pilot: POWER</text>
+    </g>
+    <g class="m-node m-note" id="me145f9__note__a4" data-role="annotation">
+      <text x="223.25" y="399" class="m-label t-label annotation-text" text-anchor="start">lub PIR=HIGH</text>
+    </g>
+    <g class="m-node m-note" id="me145f9__note__a5" data-role="annotation">
+      <text x="70.25" y="575" class="m-label t-label annotation-text" text-anchor="start">Pilot: POWER</text>
+    </g>
+    <g class="m-node m-note" id="me145f9__note__a6" data-role="annotation">
+      <text x="240.25" y="597" class="m-label t-label annotation-text" text-anchor="start">Pilot: POWER</text>
+    </g>
+    <g class="m-node m-note" id="me145f9__note__a7" data-role="annotation">
+      <text x="359.25" y="597" class="m-label t-label annotation-text" text-anchor="start">Pilot: POWER</text>
+    </g>
+  </g>
+</svg>

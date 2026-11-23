@@ -1,0 +1,41 @@
+﻿<Window x:Class="StacjaPogodowa.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Stacja pogodowa" Height="480" Width="720">
+    <DockPanel Margin="8">
+
+        <!-- wyszukiwanie: temperatura i wiatr większe niż podane -->
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,8">
+            <TextBlock Text="Temperatura większa niż:" VerticalAlignment="Center" Margin="0,0,4,0"/>
+            <TextBox x:Name="TbTemp" Width="60" Margin="0,0,12,0"/>
+            <TextBlock Text="Wiatr większy niż:" VerticalAlignment="Center" Margin="0,0,4,0"/>
+            <TextBox x:Name="TbWiatr" Width="60" Margin="0,0,12,0"/>
+            <Button Content="Szukaj" Click="Szukaj_Click" Padding="10,3" Margin="0,0,6,0"/>
+            <Button Content="Pokaż wszystkie" Click="Wszystkie_Click" Padding="10,3"/>
+        </StackPanel>
+
+        <TextBlock x:Name="TbStatus" DockPanel.Dock="Bottom" Margin="0,8,0,0" Foreground="Gray"/>
+
+        <DataGrid x:Name="DgPomiary" AutoGenerateColumns="False" IsReadOnly="True"
+                  CanUserAddRows="False" HeadersVisibility="Column">
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsMax}" Value="True">
+                            <Setter Property="Background" Value="#FFB3B3"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsMin}" Value="True">
+                            <Setter Property="Background" Value="#B3D9FF"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="*"/>
+                <DataGridTextColumn Header="Data" Binding="{Binding Data, StringFormat=yyyy-MM-dd}" Width="*"/>
+                <DataGridTextColumn Header="Temperatura" Binding="{Binding Temperatura}" Width="*"/>
+                <DataGridTextColumn Header="Wiatr" Binding="{Binding Wiatr}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</Window>
