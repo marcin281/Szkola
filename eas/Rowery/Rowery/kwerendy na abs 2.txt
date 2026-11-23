@@ -1,0 +1,57 @@
+1. Liczba miast w każdym kraju (COUNT + GROUP BY)
+
+
+SELECT CountryCode, COUNT(*) AS LiczbaMiast
+FROM city
+GROUP BY CountryCode
+ORDER BY LiczbaMiast DESC;
+
+2. Kraje posiadające więcej niż 20 miast (HAVING)
+
+SELECT CountryCode, COUNT(*) AS LiczbaMiast
+FROM city
+GROUP BY CountryCode
+HAVING COUNT(*) > 20;
+
+3. Miasta większe od średniej populacji (zapytanie zagnieżdżone)
+
+SELECT Name, Population
+FROM city
+WHERE Population > (
+    SELECT AVG(Population)
+    FROM city
+)
+ORDER BY Population DESC;
+
+
+4. Liczba języków używanych w każdym kraju (COUNT + GROUP BY)
+
+SELECT CountryCode, COUNT(*) AS LiczbaJezykow
+FROM countrylanguage
+GROUP BY CountryCode
+ORDER BY LiczbaJezykow DESC;
+
+5. Kraje z GNP większym od średniej światowej (zapytanie zagnieżdżone)
+
+SELECT Name, Continent, GNP
+FROM country
+WHERE GNP > (
+    SELECT AVG(GNP)
+    FROM country
+)
+ORDER BY GNP DESC;
+
+
+-----------Wykorzystane zagadnienia:
+COUNT() – zliczanie rekordów.
+GROUP BY – grupowanie wyników.
+HAVING – filtrowanie grup.
+AVG() – obliczanie średniej.
+ORDER BY – sortowanie.
+SELECT wewnątrz SELECT – zapytania zagnieżdżone.
+
+
+Wnioski
+Dzięki tym zapytaniom nauczyłem się liczyć miasta i języki w krajach, wyszukiwać miasta z większą populacją oraz porównywać GNP państw. Poznałem też lepiej funkcje SQL, takie jak COUNT(), GROUP BY, HAVING i AVG(). Dzięki temu wiem, jak łatwiej wyszukiwać i analizować dane w bazie danych.
+
+
