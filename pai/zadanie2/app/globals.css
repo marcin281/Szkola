@@ -241,3 +241,268 @@ form {
 .crew-form button:hover {
   background: #393542;
 }
+
+
+/* MODAL */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal {
+  width: 100%;
+  max-width: 380px;
+  padding: 28px;
+  background: #100e17;
+  border: 1px solid #393542;
+  border-radius: 6px;
+  color: #d0ced6;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+  animation: modalShow 0.2s ease-out;
+}
+
+.modal h2 {
+  margin: 0;
+  color: #d0ced6;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.modal select {
+  width: 100%;
+  padding: 13px;
+  background: #08070d;
+  border: 1px solid #393542;
+  color: #b5b3bd;
+  outline: none;
+  cursor: pointer;
+}
+
+.modal select:focus {
+  border-color: #85818f;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.modal button {
+  flex: 1;
+  padding: 12px;
+  background: #292631;
+  border: 1px solid #393542;
+  color: #d0ced6;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.modal button:hover {
+  background: #393542;
+}
+
+.modal button.cancel {
+  background: transparent;
+  color: #85818f;
+}
+
+.modal button.cancel:hover {
+  background: #292631;
+}
+
+@keyframes modalShow {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TEAM */
+
+.team-content {
+  flex: 1;
+  padding: 30px 10px;
+  color: #b5b3bd;
+  text-align: center;
+}
+
+.team-content > h2 {
+  color: #d0ced6;
+  font-size: 22px;
+  font-weight: normal;
+  margin-bottom: 35px;
+}
+
+.team-form {
+  width: 100%;
+  max-width: 420px;
+  min-height: auto;
+  margin: 0 auto 45px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 15px;
+  background: #100e17;
+  border: 1px solid #292631;
+}
+
+.team-form h3 {
+  margin: 0 0 10px;
+  color: #d0ced6;
+  font-size: 15px;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+.team-form select {
+  width: 100%;
+  padding: 13px;
+  background: #08070d;
+  border: 1px solid #393542;
+  color: #b5b3bd;
+  outline: none;
+}
+
+.team-form select:focus {
+  border-color: #85818f;
+}
+
+.team-form button {
+  width: 100%;
+  padding: 13px;
+  background: #292631;
+  border: 1px solid #393542;
+  color: #d0ced6;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.team-form button:hover {
+  background: #393542;
+}
+
+.teams-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.team-box {
+  padding: 20px;
+  background: #100e17;
+  border: 1px solid #292631;
+  text-align: left;
+}
+
+.team-box h3 {
+  margin: 0 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #292631;
+  color: #d0ced6;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+.team-box ol {
+  padding-left: 25px;
+}
+
+.team-box li {
+  padding: 10px 0;
+  color: #a09ca9;
+  border-bottom: 1px solid #292631;
+}
+
+.team-box li span {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.team-box li button {
+  float: right;
+  background: transparent;
+  border: none;
+  color: #77727f;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.team-box li button:hover {
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .teams-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CREW LINK */
+ a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 22px;
+  margin: 15px 0 25px;
+  background: #100e17;
+  border: 1px solid #393542;
+  color: #b5b3bd;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+a:hover {
+  background: #292631;
+  border-color: #625d6d;
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+button {
+  padding: 12px 22px;
+  background: #100e17;
+  border: 1px solid #393542;
+  color: #b5b3bd;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: #292631;
+  border-color: #625d6d;
+  color: #fff;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button:focus-visible {
+  outline: 1px solid #85818f;
+  outline-offset: 3px;
+}

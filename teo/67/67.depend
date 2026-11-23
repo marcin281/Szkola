@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1795168336 source:c:\users\zs2\desktop\szkola\teo\67\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+

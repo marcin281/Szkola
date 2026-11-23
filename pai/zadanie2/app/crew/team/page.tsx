@@ -1,80 +1,137 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
 
-export default function AddCrew() {
-  const [name, setName] = useState("");
-  const [team, setTeam] = useState("team1");
+export default function Team() {
   const [crew, setCrew] = useState<any[]>([]);
-
-  const router = useRouter();
-  const searchParams = useSearchParams();
+  const [team, setTeam] = useState<any[]>([]);
+  const [selectedTeam, setSelectedTeam] = useState("team1");
+  const [selectedMember, setSelectedMember] = useState("");
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     setCrew(JSON.parse(localStorage.getItem("crew") || "[]"));
+    setTeam(JSON.parse(localStorage.getItem("team") || "[]"));
+  }, []);
 
-    const selectedTeam = searchParams.get("team");
+  const openModal = (teamName: string) => {
+    setSelectedTeam(teamName);
+    setSelectedMember("");
+    setShowModal(true);
+  };
 
-    if (selectedTeam === "team1" || selectedTeam === "team2") {
-      setTeam(selectedTeam);
-    }
-  }, [searchParams]);
+  const addMember = () => {
+    if (!selectedMember) return;
 
-  const addTeam = () => {
-    if (!name) return;
-
-    const teams = JSON.parse(localStorage.getItem("team") || "[]");
-
-    const updatedTeams = teams.filter(
-      (member: any) => member.name !== name
+    const updatedTeams = team.filter(
+      (member) => member.name !== selectedMember
     );
 
     updatedTeams.push({
-      name: name,
-      team: team
+      name: selectedMember,
+      team: selectedTeam
     });
 
     localStorage.setItem("team", JSON.stringify(updatedTeams));
-
-    router.push("/crew");
+    setTeam(updatedTeams);
+    setSelectedMember("");
+    setShowModal(false);
   };
 
   return (
-    <div>
-      <h2>Add team member</h2>
+    <div className="team-content">
+      <h2>TEAMS</h2>
 
-      <form
-        className="team-form"
-        onSubmit={(e) => {
-          e.preventDefault();
-          addTeam();
-        }}
-      >
-        <select
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
+      <div className="teams-list">
+
+        <section className="team-box">
+          <h3>
+            TEAM 1
+            <button onClick={() => openModal("team1")}>
+              + ADD
+            </button>
+          </h3>
+
+          <ol>
+            {team
+              .filter((member) => member.team === "team1")
+              .map((member, i) => (
+                <li key={i}>
+                  <span>{member.name}</span>
+                </li>
+              ))}
+          </ol>
+        </section>
+
+        <section className="team-box">
+          <h3>
+            TEAM 2
+            <button onClick={() => openModal("team2")}>
+              + ADD
+            </button>
+          </h3>
+
+          <ol>
+            {team
+              .filter((member) => member.team === "team2")
+              .map((member, i) => (
+                <li key={i}>
+                  <span>{member.name}</span>
+                </li>
+              ))}
+          </ol>
+        </section>
+
+      </div>
+
+      {showModal && (
+        <div
+          className="modal-overlay"
+          onClick={() => setShowModal(false)}
         >
-          <option value="">Select crew member</option>
+          <div
+            className="modal"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2>ADD CREW MEMBER</h2>
 
-          {crew.map((member, i) => (
-            <option key={i} value={member.name}>
-              {member.name}
-            </option>
-          ))}
-        </select>
+            <select
+              value={selectedMember}
+              onChange={(e) => setSelectedMember(e.target.value)}
+            >
+              <option value="">Select crew member</option>
 
-        <select
-          value={team}
-          onChange={(e) => setTeam(e.target.value)}
-        >
-          <option value="team1">Team 1</option>
-          <option value="team2">Team 2</option>
-        </select>
+              {crew.map((member, i) => (
+                <option key={i} value={member.name}>
+                  {member.name}
+                </option>
+              ))}
+            </select>
 
-        <button type="submit">Add team member</button>
-      </form>
+            <select
+              value={selectedTeam}
+              onChange={(e) => setSelectedTeam(e.target.value)}
+            >
+              <option value="team1">Team 1</option>
+              <option value="team2">Team 2</option>
+            </select>
+
+            <div className="modal-buttons">
+              <button onClick={addMember}>
+                ADD
+              </button>
+
+              <button
+                className="cancel"
+                onClick={() => setShowModal(false)}
+              >
+                CANCEL
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
