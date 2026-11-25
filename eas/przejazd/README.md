@@ -18,7 +18,7 @@ Prosta aplikacja konsolowa symulująca działanie automatycznego szlabanu oparta
 Program korzysta z biblioteki `<conio.h>`, dlatego przeznaczony jest dla systemu **Windows**.
 
 
-``` marmaid 
+```marmaid 
 stateDiagram-v2
     state "0: Zamknięty(Brak pojazdu)" as S0
     state "1: Otwieranie(Brak pojazdu)" as S1
