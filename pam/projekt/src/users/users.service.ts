@@ -1,22 +1,30 @@
 import { Injectable } from "@angular/core";
+import { Subject } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
 })
 export class UsersService {
 
-    users: string[] = ['Maks Rajski', 'Oliwier Strąk'];
+    private users: string[] = ['Maks Rajski', 'Oliwier Strąk'];
+    usersChanged = new Subject<string[]>();
+
+    getUsers(): string[]{
+        return this.users;
+    }
 
     addUser(name: string): void {
-        this.users.push(name);
+        if(!this.users.includes(name)){
+            this.users.push(name);
+            this.usersChanged.next(this.users)
+        }
     }
 
     removeUser(name: string): void {
-        console.log('delete: '+name);
-        if(this.users.indexOf(name)!==-1){
-            const index: number=this.users.indexOf(name);
-            const removed=this.users.splice(index,1);
-            console.log('usuniete: '+removed)
+        if(this.users.includes(name)){
+            const index = this.users.indexOf(name);
+            this.users.splice(index, 1);
+            this.usersChanged.next(this.users);
         }
     }
 }
