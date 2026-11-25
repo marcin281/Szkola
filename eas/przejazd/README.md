@@ -20,37 +20,32 @@ Program korzysta z biblioteki `<conio.h>`, dlatego przeznaczony jest dla systemu
 
 ```mermaid 
 stateDiagram-v2
-    state "0: Zamknięty(Brak pojazdu)" as S0
-    state "1: Otwieranie(Brak pojazdu)" as S1
-    state "1P: Otwieranie + SAMOCHÓD(Wykryto pojazd / Mandat = TAK)" as S1_P
-    state "2: Otwarty(Brak pojazdu)" as S2
-    state "2P: Otwarty + SAMOCHÓD(Mandat = TAK do następnej akcji)" as S2_P
-    state "3: Zamykanie(Brak pojazdu)" as S3
-    state "3P: Zamykanie + SAMOCHÓD(Wykryto pojazd / Mandat = TAK)" as S3_P
-    state "0P: Zamknięty + SAMOCHÓD(Mandat = TAK do następnej akcji)" as S0_P
-    state "4: ALARM(Szlaban zatrzymany)" as S4
+    state "0: Zamknięty" as S0
+    state "1: Otwieranie" as S1
+    state "2: Otwarty" as S2
+    state "3: Zamykanie" as S3
+    state "4: ALARM (Szlaban zatrzymany)" as S4
+    state "P: SAMOCHÓD (Wykryto pojazd / Mandat = TAK)" as SP
 
     %% Otwieranie
     S0 --> S1 : Przycisk
-    S0_P --> S1 : Przycisk (reset flagi pojazd)
-    S1 --> S1_P : Klawisz w trakcie 5s/ Wykryto samochód + Mandat
     S1 --> S2 : Upływ 5s (brak samochodu)
-    S1_P --> S2_P : Upływ 5s (z samochodem)
+    S1 --> SP : Klawisz w trakcie 5s (otwieranie) / Wykryto samochód + Mandat
+    SP --> S2 : Upływ 5s (zakończenie otwierania)
 
     %% Zamykanie
     S2 --> S3 : Przycisk
-    S2_P --> S3 : Przycisk (reset flagi pojazd)
-    S3 --> S3_P : Klawisz w trakcie 5s/ Wykryto samochód + Mandat
     S3 --> S0 : Upływ 5s (brak samochodu)
-    S3_P --> S0_P : Upływ 5s (z samochodem)
+    S3 --> SP : Klawisz w trakcie 5s (zamykanie) / Wykryto samochód + Mandat
+    SP --> S0 : Upływ 5s (zakończenie zamykania)
 
     %% Przejścia do ALARMU (ze wszystkich stanów w ruchu)
     S1 --> S4 : Klawisz lub
-    S1_P --> S4 : Klawisz lub
     S3 --> S4 : Klawisz lub
-    S3_P --> S4 : Klawisz lub
+    SP --> S4 : Klawisz lub
 
     %% Wyjście z ALARMU
     S4 --> S0 : Przycisk (Reset alarmu)
+
 
 ```
