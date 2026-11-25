@@ -1,0 +1,131 @@
+<svg class="dark " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513.33 1042.1" width="513.33" height="1042.1" id="m68c70a__root" data-diagram-type="state">
+  <style data-mercat-style="universal">.mercat text{font-family:'Google Sans',Roboto,Arial,sans-serif;fill:var(--m-text);dominant-baseline:central}.mercat .m-node .m-shape{fill:var(--m-node-fill);stroke:var(--m-node-stroke);stroke-width:1.5px}.mercat .m-edge .m-path{fill:none;stroke:var(--m-line);stroke-width:1.5px}.mercat .m-edge-label .m-pill-bg,.mercat .m-edge-label .m-shape{fill:var(--m-pill-bg);stroke:var(--m-pill-border);stroke-width:1px}.mercat .m-edge-label .m-label{fill:var(--m-text-sec)}.mercat .t-label{font-size:13px;font-weight:500}.mercat .t-edge{font-size:11px;font-weight:400}</style>
+  <style data-mercat-style="theme-light">#m68c70a__root{--m-text:#1f1f1f;--m-text-sec:#797979;--m-line:#545454;--m-node-fill:#f8f9fa;--m-node-stroke:#747775;--m-pill-bg:#fbfbfb;--m-pill-border:#d7d7d7}</style>
+  <style data-mercat-style="theme-dark">#m68c70a__root.dark{--m-text:#e3e3e3;--m-text-sec:#959595;--m-line:#bfbfbf;--m-node-fill:#2d2e30;--m-node-stroke:#8e918f;--m-pill-bg:#232323;--m-pill-border:#424242}</style>
+  <g class="mercat mercat-state" transform="translate(391.74, -35)">
+    <defs>
+      <marker id="m68c70a__mk-arrow" refX="9.45" refY="3.4" markerWidth="10.8" markerHeight="6.8" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+        <path d="M 0 0 L 10.8 3.4 L 0 6.8 Z" class="m-marker" fill="var(--m-line)" stroke="none"/>
+      </marker>
+    </defs>
+    <g class="m-node m-edge" id="m68c70a__edge__S0__S1__0" data-role="connector">
+      <path d="M -27.85 86.9 L -27.85 205.55" class="m-path" marker-end="url(#m68c70a__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="m68c70a__edge__S1__S2__0" data-role="connector">
+      <path d="M -50 243.8 L -50 273.8 Q -50 279.8, -56 279.8 L -156.29 279.8 Q -162.29 279.8, -162.29 285.8 L -162.29 536.25" class="m-path" marker-end="url(#m68c70a__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="m68c70a__edge__S1__S4__0" data-role="connector">
+      <path d="M -5.7 243.8 L -5.7 273.8 Q -5.7 279.8, 0.3 279.8 L 100.6 279.8 Q 106.6 279.8, 106.6 285.8 L 106.6 459.38 Q 106.6 465.38, 100.6 465.38 L -7.45 465.38 Q -13.45 465.38, -13.45 471.38 L -13.45 1023.85" class="m-path" marker-end="url(#m68c70a__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="m68c70a__edge__S1__CarOpen__0" data-role="connector">
+      <path d="M -27.85 243.8 L -27.85 362.45" class="m-path" marker-end="url(#m68c70a__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="m68c70a__edge__CarOpen__S2__0" data-role="connector">
+      <path d="M -53.66 417.6 L -53.66 479.6 Q -53.66 485.6, -59.66 485.6 L -152.73 485.6 Q -158.73 485.6, -158.73 491.6 L -158.73 536.25" class="m-path" marker-end="url(#m68c70a__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="m68c70a__edge__CarOpen__S4__0" data-role="connector">
+      <path d="M -2.03 417.6 L -2.03 1023.85" class="m-path" marker-end="url(#m68c70a__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="m68c70a__edge__S2__S3__0" data-role="connector">
+      <path d="M -170.68 574.5 L -170.68 693.15" class="m-path" marker-end="url(#m68c70a__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="m68c70a__edge__S3__S0__0" data-role="connector">
+      <path d="M -233.88 712.95 L -247.88 712.95 Q -253.88 712.95, -253.88 706.95 L -253.88 67.99 Q -253.88 61.99, -247.88 61.99 L -84.46 61.99" class="m-path" marker-end="url(#m68c70a__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="m68c70a__edge__S3__S4__0" data-role="connector">
+      <path d="M -192.87 731.4 L -192.87 806.85 Q -192.87 812.85, -198.87 812.85 L -340.74 812.85 Q -346.74 812.85, -346.74 818.85 L -346.74 1031.5 Q -346.74 1037.5, -340.74 1037.5 L -69.99 1037.5" class="m-path" marker-end="url(#m68c70a__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="m68c70a__edge__S3__CarClose__0" data-role="connector">
+      <path d="M -163.86 731.4 L -163.86 850.05" class="m-path" marker-end="url(#m68c70a__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="m68c70a__edge__CarClose__S0__0" data-role="connector">
+      <path d="M -301.74 878.3 L -370.74 878.3 Q -376.74 878.3, -376.74 872.3 L -376.74 74.45 Q -376.74 68.45, -370.74 68.45 L -84.46 68.45" class="m-path" marker-end="url(#m68c70a__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="m68c70a__edge__CarClose__S4__0" data-role="connector">
+      <path d="M -212.29 905.2 L -212.29 935.2 Q -212.29 941.2, -206.29 941.2 L -48.24 941.2 Q -42.24 941.2, -42.24 947.2 L -42.24 1023.85" class="m-path" marker-end="url(#m68c70a__mk-arrow)"/>
+    </g>
+    <g class="m-node m-edge" id="m68c70a__edge__S4__S0__0" data-role="connector">
+      <path d="M -68.64 1035.64 L -370.74 1035.64 Q -376.74 1035.64, -376.74 1029.64 L -376.74 80.91 Q -376.74 74.91, -370.74 74.91 L -84.46 74.91" class="m-path" marker-end="url(#m68c70a__mk-arrow)"/>
+    </g>
+    <g class="m-node m-node--rounded" id="m68c70a__node__S0" data-role="vertex">
+      <rect x="-83.11" y="50" width="110.52" height="36.9" rx="5" ry="5" class="m-shape"/>
+      <text x="-27.85" y="68.45" class="m-label t-label" text-anchor="middle">0: Zamknięty</text>
+    </g>
+    <g class="m-node m-node--rounded" id="m68c70a__node__S1" data-role="vertex">
+      <rect x="-84.15" y="206.9" width="112.6" height="36.9" rx="5" ry="5" class="m-shape"/>
+      <text x="-27.85" y="225.35" class="m-label t-label" text-anchor="middle">1: Otwieranie</text>
+    </g>
+    <g class="m-node m-node--rounded" id="m68c70a__node__CarOpen" data-role="vertex">
+      <rect x="-117.29" y="363.8" width="178.89" height="53.8" rx="5" ry="5" class="m-shape"/>
+      <text x="-27.85" y="390.7" class="m-label t-label" text-anchor="middle"><tspan x="-27.85" dy="-8.45px">Samochód (otwieranie)</tspan><tspan x="-27.85" dy="16.9px">[pojazd = true / Mandat]</tspan></text>
+    </g>
+    <g class="m-node m-node--rounded" id="m68c70a__node__S2" data-role="vertex">
+      <rect x="-218.51" y="537.6" width="95.66" height="36.9" rx="5" ry="5" class="m-shape"/>
+      <text x="-170.68" y="556.05" class="m-label t-label" text-anchor="middle">2: Otwarty</text>
+    </g>
+    <g class="m-node m-node--rounded" id="m68c70a__node__S3" data-role="vertex">
+      <rect x="-233.88" y="694.5" width="111.03" height="36.9" rx="5" ry="5" class="m-shape"/>
+      <text x="-178.36" y="712.95" class="m-label t-label" text-anchor="middle">3: Zamykanie</text>
+    </g>
+    <g class="m-node m-node--rounded" id="m68c70a__node__CarClose" data-role="vertex">
+      <rect x="-301.74" y="851.4" width="178.89" height="53.8" rx="5" ry="5" class="m-shape"/>
+      <text x="-212.29" y="878.3" class="m-label t-label" text-anchor="middle"><tspan x="-212.29" dy="-8.45px">Samochód (zamykanie)</tspan><tspan x="-212.29" dy="16.9px">[pojazd = true / Mandat]</tspan></text>
+    </g>
+    <g class="m-node m-node--rounded" id="m68c70a__node__S4" data-role="vertex">
+      <rect x="-68.64" y="1025.2" width="81.58" height="36.9" rx="5" ry="5" class="m-shape"/>
+      <text x="-27.85" y="1043.65" class="m-label t-label" text-anchor="middle">4: Alarm</text>
+    </g>
+    <g class="m-edge-label">
+      <rect x="-63.83" y="135.25" width="71.96" height="23.3" rx="11.65" ry="11.65" class="m-pill-bg"/>
+      <text x="-27.85" y="146.9" class="m-label t-edge" text-anchor="middle">Przycisk 1</text>
+    </g>
+    <g class="m-edge-label">
+      <rect x="-197.48" y="397.05" width="70.38" height="23.3" rx="11.65" ry="11.65" class="m-pill-bg"/>
+      <text x="-162.29" y="408.7" class="m-label t-edge" text-anchor="middle">Upływ 5s</text>
+    </g>
+    <g class="m-edge-label" transform="rotate(-90, -17.68, 745.29)">
+      <rect x="-65.53" y="733.64" width="95.69" height="23.3" rx="11.65" ry="11.65" class="m-pill-bg"/>
+      <text x="-17.68" y="745.29" class="m-label t-edge" text-anchor="middle">Klawisz 1 lub 3</text>
+    </g>
+    <g class="m-edge-label">
+      <rect x="-105.93" y="292.15" width="156.17" height="23.3" rx="11.65" ry="11.65" class="m-pill-bg"/>
+      <text x="-27.85" y="303.8" class="m-label t-edge" text-anchor="middle">Klawisz 4 (wykryto pojazd)</text>
+    </g>
+    <g class="m-edge-label">
+      <rect x="-154.61" y="439.95" width="201.9" height="23.3" rx="11.65" ry="11.65" class="m-pill-bg"/>
+      <text x="-53.66" y="451.6" class="m-label t-edge" text-anchor="middle">Upływ 5s (dokończenie otwierania)</text>
+    </g>
+    <g class="m-edge-label">
+      <rect x="-9.45" y="661.72" width="95.69" height="23.3" rx="11.65" ry="11.65" class="m-pill-bg"/>
+      <text x="38.39" y="673.38" class="m-label t-edge" text-anchor="middle">Klawisz 1 lub 3</text>
+    </g>
+    <g class="m-edge-label">
+      <rect x="-206.66" y="622.85" width="71.96" height="23.3" rx="11.65" ry="11.65" class="m-pill-bg"/>
+      <text x="-170.68" y="634.5" class="m-label t-edge" text-anchor="middle">Przycisk 1</text>
+    </g>
+    <g class="m-edge-label">
+      <rect x="-289.07" y="375.82" width="70.38" height="23.3" rx="11.65" ry="11.65" class="m-pill-bg"/>
+      <text x="-253.88" y="387.47" class="m-label t-edge" text-anchor="middle">Upływ 5s</text>
+    </g>
+    <g class="m-edge-label">
+      <rect x="-372.74" y="913.53" width="95.69" height="23.3" rx="11.65" ry="11.65" class="m-pill-bg"/>
+      <text x="-324.89" y="925.18" class="m-label t-edge" text-anchor="middle">Klawisz 1 lub 3</text>
+    </g>
+    <g class="m-edge-label">
+      <rect x="-241.94" y="816.85" width="156.17" height="23.3" rx="11.65" ry="11.65" class="m-pill-bg"/>
+      <text x="-163.86" y="828.5" class="m-label t-edge" text-anchor="middle">Klawisz 4 (wykryto pojazd)</text>
+    </g>
+    <g class="m-edge-label" transform="rotate(-90, -362.39, 473.38)">
+      <rect x="-463.54" y="461.73" width="202.3" height="23.3" rx="11.65" ry="11.65" class="m-pill-bg"/>
+      <text x="-362.39" y="473.38" class="m-label t-edge" text-anchor="middle">Upływ 5s (dokończenie zamykania)</text>
+    </g>
+    <g class="m-edge-label">
+      <rect x="-113.14" y="971.55" width="95.69" height="23.3" rx="11.65" ry="11.65" class="m-pill-bg"/>
+      <text x="-65.3" y="983.2" class="m-label t-edge" text-anchor="middle">Klawisz 1 lub 3</text>
+    </g>
+    <g class="m-edge-label">
+      <rect x="-297.98" y="1011.99" width="150.59" height="23.3" rx="11.65" ry="11.65" class="m-pill-bg"/>
+      <text x="-222.69" y="1023.64" class="m-label t-edge" text-anchor="middle">Przycisk 5 (Reset alarmu)</text>
+    </g>
+  </g>
+</svg>
